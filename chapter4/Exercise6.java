@@ -1,5 +1,8 @@
 public class Exercise6 {
 
+	/*
+	Main prog entry point.
+	*/
 	public static void main(String[] args){
 		System.out.println("Exercise 6...");
 
@@ -18,11 +21,16 @@ public class Exercise6 {
 		System.out.println("expSum(0)=" + expSum(0));
 	}
 
+	/*
+	   multAdd: Returns the product of a, b added to c.
+	*/
 	public static double multAdd(double a, double b, double c){
 		return a*b + c;
 	}
 
-
+	/*
+	  expSum: Returns x*e^-x - (1-e^-x)^0.5
+	*/
 	public static double expSum(double x){
 		double eToX = Math.exp(-1.0*x);
 		double sqrt = Math.sqrt(1 - eToX);
