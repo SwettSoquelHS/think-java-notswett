@@ -17,6 +17,14 @@ public class MethodExample {
 		int currYear = 2018;
 		printAmerican( currMonth, currDay, 
 			currMonthDay, currYear);
+
+
+		Math.pow(2,3);
+		Math.sqrt(16);
+		Math.sin(Math.PI/4);
+		Math.cos()
+		Math.tan()
+		Math.ln()
 	}
 
 	/*
