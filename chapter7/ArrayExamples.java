@@ -1,4 +1,4 @@
-public class ArrayTest {
+public class ArrayExamples {
     
     public static void main(String[] args){
         String iago = "And what's he then that says I play the villain?"
