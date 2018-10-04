@@ -32,4 +32,13 @@ public class Exercise4 {
         return true;
     }
 
+
+    char letter1 = 'a';
+    char letter2 = 'b';
+    if(letter1 < letter2){
+        System.out.println(letter1 + " is before " + letter2);
+    } else {
+        System.out.println(letter2 + " is before " + letter1);
+    }
+
 }
