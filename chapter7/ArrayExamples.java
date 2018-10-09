@@ -10,9 +10,12 @@ public class ArrayExamples {
                     + "And out of her own goodness make the net"
                     + "That shall enmesh them all.";
 
-        for(char c = '!'; c <= '-'; c++){
+        for(char c = 'a'; c <= 'z'; c++){
             System.out.println(c + " = " + Integer.valueOf(c));
         }
+
+        //allocate space for 26 letters
+        int[] letterCounts = new int[26];
 
     }
 }
