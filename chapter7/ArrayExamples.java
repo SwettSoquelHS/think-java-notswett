@@ -23,10 +23,9 @@ public class ArrayExamples {
             char currChar = iago.charAt(i);
             if( (currChar >= 97 && currChar <= 122) ||
                 (currChar >= 65 && currChar <= 90)) {
-
-                String s = String.valueOf(currChar).toLowerCase();
-                char lowerChar = s.charAt(0);
-                letterCounts[ lowerChar - 97]++;
+                if(currChar <= 90)
+                    currChar += 32;
+                letterCounts[ currChar - 97]++;
             }  
         }
 
@@ -35,7 +34,7 @@ public class ArrayExamples {
             System.out.println( c + " = " + letterCounts[i]);
         }
 
-        int[] stuffs = new[] {1,2,3,4,5};
+        int[] stuffs = new int[] {1,2,3,4,5};
 
     }
 }
