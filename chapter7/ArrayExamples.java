@@ -17,5 +17,19 @@ public class ArrayExamples {
         //allocate space for 26 letters
         int[] letterCounts = new int[26];
 
+        int[] a = new int[] {1,2,3,4};
+
+        String s = "foobar";
+        System.out.println(s.substring(2,4));
+        char c = 'c';
+        System.out.println(s + c);
+
+        print("testing indexOf");
+        print( s.indexOf('b') +"");
+
+    }
+
+    public static void print(String s){
+        System.out.println(s);
     }
 }
