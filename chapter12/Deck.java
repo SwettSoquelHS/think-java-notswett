@@ -3,13 +3,11 @@ public class Deck {
 	private Card[] theDeck;
 
 	public Deck(){
-		theDeck = new Card[52];
-		int[] suites = {Card.CLUBS, Card.SPADES, 
-			Card.HEARTS, Card. DIAMONDS};
+		theDeck = new Card[52];		
 		int currentCard = 0;
-		for(int i = 0; i < suites.length; i++){
-			for(int j = 1; j <= 13; j++){
-				theDeck[currentCard] = new Card(j, suites[i]);
+		for(int suit : Card.CARD_SUITES){
+			for(int rank: Card.CARD_RANKS){
+				theDeck[currentCard] = new Card(rank, suit);
 				currentCard++;
 			}
 		}
@@ -28,8 +26,30 @@ public class Deck {
 		}
 	}
 
+	public Card[] dealHand(int size){
+		if(size < 0 || size > theDeck.length)
+			return null;
+
+		Card[] result = new Card[size];
+		for(int i = 0; i<size; i++){
+			int deckIndex = 0;
+			while( deckIndex < theDeck.length && theDeck[deckIndex] == null){
+				deckIndex++;
+			}
+			
+			result[i] = theDeck[deckIndex];
+			theDeck[deckIndex] = null;
+		}
+		return result;
+	}
+
 	public Card topCard(){
 		return theDeck[0];
 	}
 
 }
+
+
+
+
+

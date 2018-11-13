@@ -14,5 +14,11 @@ public class GoFish {
     	System.out.println("Top card is: " + theDeck.topCard());
     	theDeck.shuffle();
     	System.out.println("Top card after shuffle: " + theDeck.topCard());
+
+
+    	Card[] aHand = theDeck.dealHand(5);
+    	for(Card c: aHand){
+    		System.out.println("The card is: " + c);
+    	}
     }
 }

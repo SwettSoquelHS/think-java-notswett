@@ -12,9 +12,9 @@ public class Card {
 
     //Rank constants for Face Cards
     public static final int ACE          =  1;
-    public static final int JACK         =  10;
-    public static final int QUEEN        =  11;
-    public static final int KING         =  12;
+    public static final int JACK         =  11;
+    public static final int QUEEN        =  12;
+    public static final int KING         =  13;
 
     //String representations of Suite and Rank
 	private static final String[] SUITES =
@@ -27,8 +27,10 @@ public class Card {
     //These public static variables
     // are useful to loop over hearts, or/and ranks
     public static final int[] CARD_SUITES = {HEARTS, CLUBS, DIAMONDS, SPADES};
-    public static final int[] CARD_RANKS =  {2,3,4,5,6,7,8,9,10,JACK, QUEEN, KING, ACE};
+    public static final int[] CARD_RANKS =  {2, 3, 4, 5, 6, 7, 8, 9, 10, 
+    											JACK, QUEEN, KING, ACE};
 
+    //Private card members
     private int rank;
     private int suit;
 
