@@ -20,10 +20,10 @@ public class TestCheckPokerHands extends TUtils {
         Card[] hand = new Card[]{ c( Card.ACE, s ), c(Card.KING,s), c(Card.QUEEN, s),c(Card.JACK, s),c(10,s) };                        
         test_isRoyalFlush(hand, true, .03);
 
-        hand = new Card[]{ c(Card.QUEEN, s),c(Card.JACK, s), c( Card.ACE, s ), c(Card.KING,s),c(10,s) };
+        hand = new Card[]{ c(Card.QUEEN, s), c(Card.JACK, s), c( Card.ACE, s ), c(Card.KING,s),c(10,s) };
         test_isRoyalFlush(hand, true, .03);
 
-        hand = new Card[]{ c(Card.QUEEN, s),c(Card.QUEEN, s), c( Card.ACE, s ), c(Card.KING,s),c(10,s) };
+        hand = new Card[]{ c(Card.QUEEN, s),c(Card.QUEEN, Card.CLUBS), c( Card.ACE, s ), c(Card.KING,s),c(10,s) };
         test_isRoyalFlush(hand, false, .04);
 
         endTest();
@@ -41,7 +41,7 @@ public class TestCheckPokerHands extends TUtils {
         hand = new Card[]{ c(3, s),c(4, s), c( 5, s ), c(6,s),c(10,s) };
         test_isStraightFlush(hand, false, .03);
 
-        hand = new Card[]{ c(3, s),c(4, s), c( 5, s ), c(6,s),c(6,s) };
+        hand = new Card[]{ c(3, s),c(4, s), c( 5, s ), c(6,s),c(7,s) };
         test_isStraightFlush(hand, true, .03);
 
         endTest();
