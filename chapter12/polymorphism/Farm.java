@@ -1,13 +1,31 @@
 public class Farm {
     public static void main(String[] args){
-        Animal animal1 = new Animal("ocelot");
-        Animal animal2 = new Animal("zebra");
-        Dog dog1 = new Dog();
+        System.out.println("Welcome to the Mr. Swett's farm.");
+
+        FarmAnimal animal = new FarmAnimal("Bessie");
+        FarmCow cow = new FarmCow("Sandy");
+        FarmChicken chicken = new FarmChicken("Mr. Waffles");
+        FarmDog doge = new FarmDog("Ollie");
+       
+
+        FarmAnimal[] allTheAnimals = new FarmAnimal[10];
+        allTheAnimals[0] = cow;
+        allTheAnimals[1] = chicken;
+        allTheAnimals[2] = doge;
+        for(FarmAnimal a: allTheAnimals){
+        	if(a != null){
+        		System.out.println("This is a: " + a.whatAmI() 
+        			+ " it's name is: " + a.getName());
+        		a.feedMe();
+        		a.makeSound();
+        	}
+        }
 
 
-        animal1.print();
-        animal1 = dog1;
-        animal1.print();
+        FarmHand lenny = new FarmHand("Lenny");
+        FarmHand george = new FarmHand("George");
+
+        lenny.feedTheAnimals(allTheAnimals);
 
     }
 }
