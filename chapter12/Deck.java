@@ -47,6 +47,31 @@ public class Deck {
 		return theDeck[0];
 	}
 
+	public static void sortHand(Card[] hand){
+		int cIndex = 0;
+		while( cIndex < hand.length ){
+			if (!bubbleUp(hand, cIndex)){
+				cIndex++;
+			}
+		}
+	}
+
+	private static boolean bubbleUp(Card[] hand, int atIndex){
+		boolean swapHappened = false;
+		for(int i = atIndex; i < hand.length-1; i++){
+			if (hand[i].getRank() > hand[i+1].getRank()){
+				Card toRight = hand[i+1];
+				hand[i+1] = hand[i];
+				hand[i] = toRight;				
+				swapHappened = true;
+			}
+		}
+		return swapHappened;
+	}
+
+	
+
+
 }
 
 

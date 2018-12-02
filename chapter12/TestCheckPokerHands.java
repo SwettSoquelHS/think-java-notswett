@@ -110,6 +110,9 @@ public class TestCheckPokerHands extends TUtils {
             }
         } catch( Exception e){
             deduct(deduction);
+            addResult("isRoyalFlush", Arrays.toString(hand), "Exception thrown", String.valueOf(expected),
+                 false);
+
         }
     } 
 
@@ -123,6 +126,9 @@ public class TestCheckPokerHands extends TUtils {
             }
         } catch( Exception e){
             deduct(deduction);
+            addResult("isStraightFlush", Arrays.toString(hand), "Exception thrown", String.valueOf(expected),
+                 false);
+
         }
     }
 
@@ -136,6 +142,8 @@ public class TestCheckPokerHands extends TUtils {
             }
         } catch( Exception e){
             deduct(deduction);
+            addResult("isFlush", Arrays.toString(hand), "exception thrown", String.valueOf(expected),
+                 false);            
         }
     }
 
@@ -148,7 +156,12 @@ public class TestCheckPokerHands extends TUtils {
                 deduct(deduction);  
             }             
         } catch( Exception e){
+            e.printStackTrace();
+            addResult("isFullHouse", Arrays.toString(hand), "exception thrown", String.valueOf(expected),
+                 false);
+
             deduct(deduction);
+
         }
     }
     
@@ -166,6 +179,9 @@ public class TestCheckPokerHands extends TUtils {
             }        
         } catch( Exception e){   
             deduct(deduction);
+            addResult("isHighCard", Arrays.toString(hand), "Eception thrown", 
+                    String.valueOf(expectedRank), false);            
+
         }
     }
 
