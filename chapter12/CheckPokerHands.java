@@ -25,8 +25,9 @@ public class CheckPokerHands {
     private static int getLowestRank(Card[] hand){
         int result = hand[0].getRank();
         for(Card c: hand){
-            if(c.getRank() < result && c.getRank() != Card.ACE)
+            if((c.getRank() < result && c.getRank() != Card.ACE) || result == Card.ACE){  
                 result = c.getRank();
+            }
         }
         return result;
     }
@@ -35,8 +36,9 @@ public class CheckPokerHands {
         int suit = hand[0].getSuit();
 
         for(Card c: hand){
-            if(c.getSuit() != suit)
+            if(c.getSuit() != suit){
                 return false;
+            }
         }
 
         int[] ranksWeHave = new int[14];
@@ -44,7 +46,7 @@ public class CheckPokerHands {
             ranksWeHave[c.getRank()]++;
         }
 
-        int lowRank = getLowestRank(hand);        
+        int lowRank = getLowestRank(hand);    
         int expetecdSum = 5*lowRank + 10;
 
         //crap, we have a 10 the ace is only worth 1

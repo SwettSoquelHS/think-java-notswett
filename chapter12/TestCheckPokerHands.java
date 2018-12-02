@@ -32,10 +32,12 @@ public class TestCheckPokerHands extends TUtils {
     public static void doTestStraightFlush(){
         startTest("Chapter12, Test Straight Flush");
         int s = Card.DIAMONDS;
-        Card[] hand = new Card[]{ c( Card.ACE, s ), c(Card.KING,s), c(Card.QUEEN, s),c(Card.JACK, s),c(10,s) };                        
+        Card[] hand = new Card[]{ c( Card.ACE, s ), c(Card.KING,s), 
+            c(Card.QUEEN, s),c(Card.JACK, s),c(10,s) };                        
         test_isStraightFlush(hand, true, .02);
 
-        hand = new Card[]{ c(Card.QUEEN, s),c(Card.JACK, s), c( Card.ACE, s ), c(Card.KING,s),c(10,s) };
+        hand = new Card[]{ c(Card.QUEEN, s),c(Card.JACK, s), c( Card.ACE, s ), 
+            c(Card.KING,s),c(10,s) };
         test_isStraightFlush(hand, true, .02);
 
         hand = new Card[]{ c(3, s),c(4, s), c( 5, s ), c(6,s),c(10,s) };
