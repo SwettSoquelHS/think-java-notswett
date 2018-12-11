@@ -9,10 +9,6 @@ public class Animal {
     }
 
     public Animal(String name){
-        this();
-
-
-    public Animal(String name){
         this.name = name;
     }
 
