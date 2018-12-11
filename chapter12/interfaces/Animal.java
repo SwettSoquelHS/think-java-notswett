@@ -10,13 +10,15 @@ public class Animal {
 
     public Animal(String name){
         this();
+
+
+    public Animal(String name){
         this.name = name;
     }
 
     public String toString(){
         String result = "\tName = " + name + "\n";
         result += "\tOwner = " + owner;
-        return result;
+        return result;    
     }
-
 }
