@@ -1,4 +1,6 @@
 
+import java.util.Arrays;
+
 public class ChangeArrays {
 
 
@@ -9,14 +11,15 @@ public class ChangeArrays {
         */
         
         int[] scores = {88,91,80,78,95};
-        System.out.println("Current scores are: " + scores);
+
+        System.out.println("Current scores are: " + Arrays.toString(scores));
 
         //TODO 1: Write code to make a new array that can hold a new
         
 
 
         // ... code to add should stay above this line
-        System.out.println("After 'adding' score: " + scores);
+        System.out.println("After 'adding' score: " + Arrays.toString(scores));
 
 
 
@@ -24,7 +27,7 @@ public class ChangeArrays {
 
 
         // ... code to remove should stay above this line
-        System.out.println("After 'remove' scores are: " + scores);
+        System.out.println("After 'remove' scores are: " + Arrays.toString(scores));
 
 
         //TODO 3: Implement the methods below
