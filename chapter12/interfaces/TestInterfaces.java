@@ -1,11 +1,8 @@
-public class TestInterfaces {
 
-    public static void main(String[] args){
-        Animal a = new Animal();
+public class ChangeArrays {
 
 
-        Animal dog = new Bulldog("Fido");
-
+    
         Breed someAnimal = (Breed)new Bulldog("Spot");
 
 
@@ -19,12 +16,6 @@ public class TestInterfaces {
         	System.out.println("Origin: " + m.getOrigin());
         	System.out.println("  Desc: " + m.getDesc());
         }
-    }
-
-
-    public static void printBreed(Breed aBreed){
-    	System.out.println("The breed is: " + aBreed.getBreed() );
-    }
 }
 
 
