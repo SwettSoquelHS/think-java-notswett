@@ -5,6 +5,6 @@ public class FarmCow extends FarmAnimal {
 	}
 
 	public void makeSound(){
-		System.out.println("Moooooooo.");
+		System.out.println(name + "says Moooooooo.");
 	}
 }

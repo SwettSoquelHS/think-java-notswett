@@ -5,7 +5,8 @@
 */
 public class FarmAnimal {
 
-	private String name;
+	protected String name;
+	protected int age;
 
 	public FarmAnimal(String name){
 		this.name = name;
@@ -19,12 +20,11 @@ public class FarmAnimal {
 		System.out.println("I have been fed.");
 	}
 
-	public String whatAmI(){		
+	public String whatAmI(){
 		return this.getClass().getName();
 	}
 
 	public String getName(){
 		return name;
 	}
-	
 }
