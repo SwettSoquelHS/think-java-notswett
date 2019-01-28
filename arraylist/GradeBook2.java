@@ -5,12 +5,12 @@ import java.util.ArrayList;
     ArrayList can be used to keep track of 
     a collection of similar items.
 */
-public class GradeBook {
+public class GradeBook2 {
     
     public static void main(String[] args){
 
         //Create an instance of a gradebook to add 
-        GradeBook book1 = new GradeBook();
+        GradeBook2 book1 = new GradeBook2();
         book1.addAssignment("Exam1", 0.9 , 1.0);
         book1.addAssignment("Exam2", 0.75, 1.0);
         book1.addAssignment("Quiz" , 0.2 , 0.25);
@@ -30,7 +30,7 @@ public class GradeBook {
     /*
         Default constructor.
     */
-    GradeBook(){
+    GradeBook2(){
         assignments = new ArrayList();
     }
 

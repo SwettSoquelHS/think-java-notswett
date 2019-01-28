@@ -17,8 +17,8 @@ public class ListExamples {
         System.out.println(myPets);
 
         
-        int[] array1 = new int[10];
-        int[] array2 = {1,2,3,4,5};
+        
+        int[] scores = {88,91,80,78,95};
 
         System.out.println("\n");
     }
