@@ -25,13 +25,13 @@ public class GradeBook2 {
     }
 
     /* Gradbook Properties */
-    ArrayList assignments;
+    ArrayList<Assignment> assignments;
 
     /*
         Default constructor.
     */
     GradeBook2(){
-        assignments = new ArrayList();
+        assignments = new ArrayList<Assignment>();
     }
 
 
@@ -52,7 +52,7 @@ public class GradeBook2 {
         boolean result = false;
         int deleteAt = -1;
         for(int i = 0; i < assignments.size(); i++){
-            Assignment asg = (Assignment)assignments.get(i);
+            Assignment asg = assignments.get(i);
             if( assignmentName.equals(asg.getName()) ){
                 deleteAt = i;
                 break;
@@ -77,8 +77,7 @@ public class GradeBook2 {
         double totalScore = 0;
 
         //Loop over assignments and add up the points
-        for(Object item: assignments){
-            Assignment asg = (Assignment)item;
+        for(Assignment asg: assignments){            
             myScore += asg.getScore();
             totalScore += asg.getTotalPoints();
         }
@@ -94,8 +93,7 @@ public class GradeBook2 {
             Assignment Name:  score/Total
     */
     void printGradebook(){
-        for(Object o: assignments){
-            Assignment asg = (Assignment)o;
+        for(Assignment asg: assignments){            
             //asg.getName()
             //    The Assignment name:  # / #
             System.out.println("\t" + asg.getName() + ": " + asg.getScore() +
