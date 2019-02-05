@@ -22,6 +22,10 @@ public class GradeBook {
         book1.deleteAssignment("Exam2");
         book1.printGradebook();
         System.out.println("Current grade is: " + book1.calculateGrade());
+
+        ArrayList<String> b = new ArrayList<String>();
+        b.addAll(args);
+
     }
 
     /* Gradbook Properties */
