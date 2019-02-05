@@ -1,0 +1,14 @@
+<script>
+  var interval = 5; // in seconds
+  var pages = [
+    'http://facebook.com/profile.php',
+    'http://facebook.com/notifications.php',
+    'http://facebook.com/messages.php'
+  ];
+  var current_page_index = 0;
+
+  setInterval(function() {
+    loadintoIframe('myframe', pages[current_page_index]);
+    current_page_index = (current_page_index + 1) % pages.length;
+  }, interval * 1000); // second setInterval param is milliseconds
+</script>
