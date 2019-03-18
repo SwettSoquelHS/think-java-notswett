@@ -1,9 +1,13 @@
 public class BoardItem {
   
-  private int colId, rowId;
-  private int maxRow, maxCol;
+  //Where the board item upper left/right corner lives
+  protected int colId, rowId;
   
-  private int[][] glyphData;
+  //TODO: This might not be the best way to track
+  //but we need to know when we are out of bounds
+  protected int maxRow, maxCol;
+  
+  protected int[][] glyphData;
   
   public BoardItem(int rowAt, int colAt){
      this.rowId = rowAt;
@@ -18,14 +22,16 @@ public class BoardItem {
   
   public int col(){ return colId; }
   
-  public void show(int xAt, int yAt, int cellSize){
+  public void show(int xAt, int yAt, int cellSize){    
     for(int row = 0; row < glyphData.length; row++){
        for(int col = 0; col < glyphData[row].length; col++){
           int fillColor = glyphData[row][col];
-          fill(fillColor);
-          int x = xAt + col*cellSize;
-          int y = yAt + row*cellSize;
-          rect(x,y,cellSize,cellSize);
+          if(fillColor > -1){
+            fill(fillColor);
+            int x = xAt + col*cellSize;
+            int y = yAt + row*cellSize;
+            rect(x,y,cellSize,cellSize);
+          }
        }
     }
   }
@@ -44,5 +50,7 @@ public class BoardItem {
      if(rowId + by <= maxRow - glyphData.length  && rowId + by >= 0)
        rowId += by;
   }
+  
+  
   
 }
