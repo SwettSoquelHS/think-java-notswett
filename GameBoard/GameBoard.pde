@@ -1,7 +1,7 @@
 Board theBoard;
 BoardItem item1;
 TriangleItem tItem1;
-
+Sticky stickGuy;
 
 int[][] layer = {
   {0, 255, 125, 9, 10, 15, 24, 45, 150}, 
@@ -11,13 +11,16 @@ int[][] layer = {
 };
 
 void setup() {
-  size(800, 600);
-
-  theBoard = new Board(width/6, height/6, 20, 20, 20);
+  size(1600, 1200);
+  int cellSize = 100;
+  int boardCols = (width-100)/cellSize;
+  int boardRows = (height-100)/cellSize;
+  theBoard = new Board(50, 50, boardRows, boardCols, cellSize);
 
   item1 = new BoardItem(2, 5);
-  int[][] item1Data = {{-1, 0, -1}, 
-    {0, 0, 0}, 
+  int[][] item1Data = 
+   {{-1, 0, -1}, 
+    { 0, 0, 0}, 
     {-1, 0, -1}};
   item1.setData(item1Data);
   //theBoard.addItem( item1 );
@@ -26,6 +29,9 @@ void setup() {
   tItem1 = new TriangleItem(1,1);
   tItem1.setData(item1Data);
   theBoard.addItem(tItem1);
+  
+  stickGuy = new Sticky(7,7);
+  theBoard.addItem(stickGuy);
 }
 
 void draw() {
