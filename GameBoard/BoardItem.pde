@@ -51,6 +51,22 @@ public class BoardItem {
        rowId += by;
   }
   
-  
+  public Cell[] getVanguard( char direction ){
+    ArrayList<Cell> result = new ArrayList<Cell>();
+    
+    //deal with the up direction
+    if(direction == 'u'){
+      for(int i = 0; i < glyphData[0].length; i++){
+         if( glyphData[0][i] > -1 ){
+           int colVal = i + colId;
+           int rowVal = rowId - 1;
+           Cell c = new Cell(rowVal, colVal);
+           result.add(c);
+         }
+      }
+    }
+    
+    return result.toArray(new Cell[0]);
+  }
   
 }

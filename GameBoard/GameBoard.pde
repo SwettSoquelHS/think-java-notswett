@@ -19,7 +19,7 @@ void setup() {
 
   item1 = new BoardItem(2, 5);
   int[][] item1Data = 
-   {{-1, 0, -1}, 
+   {{ 0, 0, 0}, 
     { 0, 0, 0}, 
     {-1, 0, -1}};
   item1.setData(item1Data);
@@ -51,12 +51,17 @@ void keyPressed() {
   if (key == CODED) {
     if (keyCode == UP) {
       doUpKey();
+      println(tItem1.getVanguard('u'));
+      
     } else if (keyCode == DOWN) {
       doDownKey();
+      println(tItem1.getVanguard('d'));
     } else if (keyCode == LEFT) {
       doLeftKey();
+      println(tItem1.getVanguard('l'));
     } else if (keyCode == RIGHT) {
       doRightKey();
+      println(tItem1.getVanguard('r'));
     }
   }
 }
